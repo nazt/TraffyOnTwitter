@@ -1,6 +1,7 @@
 <?
 require 'twitter.lib.php';
- $twitter = new Twitter("devtraffy", "devtraffytwitter789");
+require 'twitter.account.config.php';
+ $twitter = new Twitter($config['account'], $config['password']);
  $mentions = $twitter->getMentions();
 
 $xml = new SimpleXMLElement($mentions);
